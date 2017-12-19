@@ -189,3 +189,9 @@
         </div>
     </div>
 </div>
+
+@if (count($promotions) > 0)
+    @foreach($promotions as $promotion)
+        @include('partials.modals.fixed-modal', ['modal' => $promotion])
+    @endforeach
+@endif

@@ -13,7 +13,25 @@ class PageController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $data['promotions'] = [
+            (object) [
+                'id' => 'promotionModal1',
+                'title' => 'Great Value',
+                'image' => 'img/promotion/pro-market10.jpg',
+            ],
+            (object) [
+                'id' => 'promotionModal2',
+                'title' => 'Crazy Sale',
+                'image' => 'img/promotion/pro-giant10.jpg',
+            ],
+            (object) [
+                'id' => 'promotionModal3',
+                'title' => 'The Guardian',
+                'image' => 'img/promotion/pro-guardian15.jpg',
+            ]
+        ];
+        
+        return view('home.index', $data);
     }
 
     /**
